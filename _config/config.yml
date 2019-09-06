@@ -1,0 +1,45 @@
+---
+name: BootstrapForm
+---
+ShowPro\BootstrapForms\BootstrapForm:
+  bootstrap_included: true
+  jquery_included: true
+  bootstrap_form_included: true
+  bootstrap_select_included: true
+  inline_fields:
+    - SilverStripe\Forms\CheckboxField
+    - SilverStripe\Forms\FormAction
+SilverStripe\Forms\FormField:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapFormField
+SilverStripe\Forms\DropdownField:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapDropdownField
+SilverStripe\Forms\TextField:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapTextField
+SilverStripe\Forms\OptionsetField:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapOptionsetField
+SilverStripe\Forms\FormAction:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapFormAction
+SilverStripe\Forms\TextareaField:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapTextField
+SilverStripe\Forms\FieldList:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapFieldList
+SilverStripe\Forms\CheckboxSetField:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapCheckboxSetField
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\MemberAuthenticator\MemberLoginForm:
+    class: ShowPro\BootstrapForms\BootstrapMemberLoginForm
+---
+only:
+  moduleexists: userforms
+---
+SilverStripe\UserForms\Control\UserDefinedFormController:
+  extensions:
+    - ShowPro\BootstrapForms\BootstrapUserForm
