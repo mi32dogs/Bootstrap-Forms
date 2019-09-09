@@ -46,12 +46,12 @@ class BootstrapFieldList extends Extension {
 			// If the user has customised the holder template already, don't apply the default one.
 			if($sng->getFieldHolderTemplate() == $f->getFieldHolderTemplate()) {
 			    $className = ClassInfo::shortName($f->__toString());
-				$template = "UncleCheese\BootstrapForms\Bootstrap{$className}_holder";
+				$template = "showpro\BootstrapForms\Bootstrap{$className}_holder";
 				if(SSViewer::hasTemplate($template)) {
 					$f->setFieldHolderTemplate($template);
 				}
 				else {
-					$f->setFieldHolderTemplate("UncleCheese\BootstrapForms\BootstrapFieldHolder");
+					$f->setFieldHolderTemplate("showpro\BootstrapForms\BootstrapFieldHolder");
 				}
 
 			}
@@ -59,7 +59,7 @@ class BootstrapFieldList extends Extension {
 			if($sng->getTemplate() == $f->getTemplate()) {
 				foreach(array_reverse(ClassInfo::ancestry($f)) as $className) {
                     $shortName = ClassInfo::shortName($className);
-					$bootstrapCandidate = "UncleCheese\BootstrapForms\Bootstrap{$shortName}";
+					$bootstrapCandidate = "showpro\BootstrapForms\Bootstrap{$shortName}";
 					$nativeCandidate = $shortName;
 					if(SSViewer::hasTemplate($bootstrapCandidate)) {
 						$f->setTemplate($bootstrapCandidate);

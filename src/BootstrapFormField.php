@@ -6,6 +6,8 @@ use SilverStripe\Core\Convert;
 use SilverStripe\Forms\FormField;
 use SilverStripe\Core\Config\Config;
 
+use SilverStripe\Dev\Debug;
+
 /**
  * The base class for creating a {@link FormField} object
  * that is compatible with the Twitter Bootstrap CSS framework.
@@ -265,6 +267,8 @@ class BootstrapFormField extends DataExtension {
 	 */
 	public function onBeforeRender (FormField $field) {
         $inline_fields = Config::inst()->get(BootstrapForm::class,'inline_fields');
+
+        //debug::show($field->class);
         if(!in_array($field->class, $inline_fields )) {
             $field->addExtraClass('form-control');
         }

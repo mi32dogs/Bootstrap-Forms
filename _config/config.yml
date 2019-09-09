@@ -2,13 +2,14 @@
 name: BootstrapForm
 ---
 ShowPro\BootstrapForms\BootstrapForm:
-  bootstrap_included: true
-  jquery_included: true
+  bootstrap_included: false
+  jquery_included: false
   bootstrap_form_included: true
   bootstrap_select_included: true
   inline_fields:
     - SilverStripe\Forms\CheckboxField
     - SilverStripe\Forms\FormAction
+    - SilverStripe\Forms\TextField
 SilverStripe\Forms\FormField:
   extensions:
     - ShowPro\BootstrapForms\BootstrapFormField

@@ -140,13 +140,13 @@ class BootstrapForm extends Form {
 	 */
 	public function forTemplate() {
         if($this->config()->get('bootstrap_included')) {
-            Requirements::css("unclecheese/bootstrap-forms: css/bootstrap.css");
+            Requirements::css("showpro/bootstrap-forms: css/bootstrap.css");
 		}
 		if($this->config()->get('jquery_included')) {
 			Requirements::javascript("silverstripe/admin:thirdparty/jquery/jquery.js");
 		}
 		if($this->config()->get('bootstrap_form_included')) {
-			Requirements::javascript("unclecheese/bootstrap-forms: javascript/bootstrap_forms.js");
+			Requirements::javascript("showpro/bootstrap-forms: javascript/bootstrap_forms.js");
 		}
 		$this->addExtraClass("form-{$this->formLayout}");
 
