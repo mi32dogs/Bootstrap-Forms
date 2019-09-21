@@ -1,6 +1,7 @@
 <?php
 namespace ShowPro\BootstrapForms;
 
+use SilverStripe\Dev\Debug;
 use SilverStripe\Forms\Form;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\View\Requirements;
